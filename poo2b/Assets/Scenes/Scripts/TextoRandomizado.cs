@@ -9,12 +9,10 @@ public class TextoRandomizado : MonoBehaviour
    
     public int numero;
 
-
     private void Start()
     {
         UITexto.text = novoTexto + " " + numero;
     }
-
 
     void Update()
     {
@@ -23,11 +21,17 @@ public class TextoRandomizado : MonoBehaviour
             numero--;
             UITexto.text = novoTexto + " " + numero;
         }
-      
-        if (Input.GetKeyDown(KeyCode.Space) && numero > 0)
+        
+        if (Input.GetKeyDown(KeyCode.Z))
         {
             numero++;
             UITexto.text = novoTexto + " " + numero;
         }
+    }
+
+    public void SomaUm()
+    {
+        numero++;
+        UITexto.text = novoTexto + " " + numero;
     }
 }
